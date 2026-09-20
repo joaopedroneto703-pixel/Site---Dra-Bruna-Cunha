@@ -1,0 +1,6 @@
+{
+  "name": "Dra. Bruna Cunha | Clínica Geral e Ultrassonografia",
+  "description": "Dra. Bruna Cunha — atendimento em clínica geral e ultrassonografia em Fazenda Nova, Jussara e Montes Claros de Goiás. Agende seu atendimento.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

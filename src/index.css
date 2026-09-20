@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-coral: #FF8F85;
+  --color-coral-dark: #EB796F;
+  --color-coral-light: #FFEAE8;
+  --color-rosewood: #B1837F;
+  --color-rosewood-dark: #916864;
+  --color-rosewood-light: #F3EAE9;
+  --color-canvas: #FAF8F6;
+  --color-surface: #FFFFFF;
+  --color-ink: #241817;
+  --color-ink-muted: #6B5755;
+  --color-ink-subtle: #998381;
+  --color-border-subtle: #ECE4DF;
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
+
+/* Subtle ultrasound scanline animation */
+@keyframes ultrasoundScan {
+  0% {
+    top: 0%;
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.1;
+  }
+}
+
+.animate-scanline {
+  animation: ultrasoundScan 4.5s ease-in-out infinite;
+}
+
+/* Subtle doppler waveform pulse */
+@keyframes dopplerPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scaleY(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleY(1.15);
+  }
+}
+
+.animate-doppler {
+  animation: dopplerPulse 3s ease-in-out infinite;
+}
+
+/* Floating micro-movement */
+@keyframes floatGlass {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-slow {
+  animation: floatGlass 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: floatGlass 7s ease-in-out infinite 1.5s;
+}
+
+/* Smooth glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.glass-panel-dark {
+  background: rgba(36, 24, 23, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
